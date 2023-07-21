@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+import { useState } from "react"
+import { Button } from "react-native"
+import {View,Text,SafeAreaView} from "react-native"
+const App =() =>{
+  const [bgColor,setBgColor] = useState(`rgb(127,0,255)`)
+  const onPressHandler =() => {
+    const randomColor =`rgb(${Math.floor(Math.random()*256)} , ${Math.floor(Math.random()*256)}, ${Math.floor(Math.random()*256)})`
+    setBgColor(randomColor)
+  }
+return<SafeAreaView style={{
+  flex:1,
+  justifyContent:"center",
+  alignItems:"center",
+  backgroundColor:bgColor
+}}> 
+<Button title ="click me" onPress={onPressHandler}/>
+</SafeAreaView>
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App
