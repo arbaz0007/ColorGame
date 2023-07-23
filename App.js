@@ -8,15 +8,15 @@ const App =() =>{
     setBgColor(randomColor)
   }
 return<SafeAreaView style={{
-  
-}}> 
-<Text  style= {style.text}> Press Me</Text>
+  <Text  style= {styles.text}> Press Me</Text>
 </SafeAreaView>
+}}> 
+
 }
 export default App
 const style =StyleSheet.create
 container:{
-  flex:1,
+  flex:1, 
   justifyContent:"center",
   alignItems : "center",
   backgroundColor:bgColor
