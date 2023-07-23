@@ -10,7 +10,7 @@ const App =() =>{
 return<SafeAreaView style={{
   
 }}> 
-<Button title ="click me" onPress={onPressHandler}/>
+<Text  style= {style.text}> Press Me</Text>
 </SafeAreaView>
 }
 export default App
@@ -20,4 +20,14 @@ container:{
   justifyContent:"center",
   alignItems : "center",
   backgroundColor:bgColor
+},
+text:{
+  backgroundColor :"#ffffff",
+  padding:20,
+  paddingHorizontal:10,
+  paddingVerticle:20,
+  fontSize:20,
+  borderRadius:20,
+  backgroundColor:'rgb(127,0,255)',
+  color:"#fff"
 }
